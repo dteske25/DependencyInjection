@@ -1,0 +1,52 @@
+﻿<h2>Edit Contact</h2>
+
+<div class="row">
+    <label for="firstName">First Name</label>
+    <input id="firstName" type="text" class="form-control" />
+</div>
+<div class="row">
+    <label for="lastName">Last Name</label>
+    <input id="lastName" class="form-control" />
+</div>
+<div class="row">
+    <label for="email">Email</label>
+    <input id="email" class="form-control" />
+</div>
+<div class="row">
+    <label for="phone">Phone</label>
+    <input id="phone" class="form-control" />
+</div>
+<div class="row text-right">
+    <button onclick="cancel()" class="btn btn-danger">Cancel</button>
+    <button onclick="saveContact()" class="btn btn-success">Save</button>
+</div>
+
+@section Scripts {
+    <script>
+        function loadContact() {
+            var id = location.search.split("=")[1];
+            getContact(id).done(function (data) {
+                $("#firstName").val(data.FirstName);
+                $("#lastName").val(data.LastName);
+                $("#email").val(data.EmailAddress);
+                $("#phone").val(data.PhoneNumber);
+            });
+        }
+
+        function saveContact() {
+            var id = location.search.split("=")[1];
+            var firstName = $('#firstName').val();
+            var lastName = $('#lastName').val();
+            var email = $('#email').val();
+            var phone = $('#phone').val();
+            updateContact(id, firstName, lastName, email, phone).done(function (data) {
+                location.assign('/');
+            });
+        }
+
+        function cancel() {
+            location.assign('/');
+        }
+        loadContact();
+    </script>
+}

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace DependencyInjection.Web.Controllers
 {
@@ -12,6 +8,16 @@ namespace DependencyInjection.Web.Controllers
         {
             ViewBag.Title = "Home Page";
 
+            return View();
+        }
+
+        public ActionResult AddContact()
+        {
+            return View();
+        }
+
+        public ActionResult EditContact()
+        {
             return View();
         }
     }

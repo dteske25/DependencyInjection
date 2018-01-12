@@ -227,6 +227,10 @@
       <Project>{f1a0e0a7-da6a-47fe-a374-32455f982661}</Project>
       <Name>DependencyInjection.DataAccess</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DependencyInjection.BusinessLogic\DependencyInjection.BusinessLogic.csproj">
+      <Project>{281DD6D9-2863-4B49-9399-781996E0D5BE}</Project>
+      <Name>DependencyInjection.BusinessLogic</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DependencyInjection.Core\DependencyInjection.Core.csproj">
       <Project>{124ddfcc-ef7c-40db-b186-0c10b8800603}</Project>
       <Name>DependencyInjection.Core</Name>

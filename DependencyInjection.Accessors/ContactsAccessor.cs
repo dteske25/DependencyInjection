@@ -1,11 +1,12 @@
-﻿using DependencyInjection.Core.Models;
+﻿using DependencyInjection.Core.Accessors;
+using DependencyInjection.Core.Models;
 using System;
 using System.Data.Entity;
 using System.Linq;
 
 namespace DependencyInjection.Accessors
 {
-    public class ContactsAccessor : DbContext, IDisposable
+    public class ContactsAccessor : DbContext, IDisposable, IContactsAccessor
     {
         private DbSet<Contact> Contacts { get; set; }
 

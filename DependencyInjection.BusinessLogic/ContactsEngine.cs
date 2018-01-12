@@ -1,4 +1,5 @@
-﻿using DependencyInjection.Accessors;
+﻿using DependencyInjection.Core.Accessors;
+using DependencyInjection.Core.Engines;
 using DependencyInjection.Core.Models;
 using System;
 using System.Collections.Generic;
@@ -6,13 +7,13 @@ using System.Linq;
 
 namespace DependencyInjection.BusinessLogic
 {
-    public class ContactsEngine
+    public class ContactsEngine : IContactsEngine
     {
-        private readonly ContactsAccessor _contactsAccessor;
+        private readonly IContactsAccessor _contactsAccessor;
 
-        public ContactsEngine()
+        public ContactsEngine(IContactsAccessor contactsAccessor)
         {
-            _contactsAccessor = new ContactsAccessor();
+            _contactsAccessor = contactsAccessor;
         }
 
         public IEnumerable<Contact> GetContacts()

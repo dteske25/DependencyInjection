@@ -1,4 +1,4 @@
-﻿using DependencyInjection.BusinessLogic;
+﻿using DependencyInjection.Core.Engines;
 using DependencyInjection.Core.Models;
 using System.Collections.Generic;
 using System.Net;
@@ -10,12 +10,12 @@ namespace DependencyInjection.Web.Controllers
     public class ContactsController : ApiController
     {
         // private readonly ApplicationDbContext db;
-        private readonly ContactsEngine _contactsEngine;
+        private readonly IContactsEngine _contactsEngine;
 
-        public ContactsController()
+        public ContactsController(IContactsEngine contactsEngine)
         {
             // db = new ApplicationDbContext();
-            _contactsEngine = new ContactsEngine();
+            _contactsEngine = contactsEngine;
         }
 
         // GET: api/contact

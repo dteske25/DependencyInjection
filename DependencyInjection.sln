@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInjection.DataAcc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInjection.BusinessLogic", "DependencyInjection.BusinessLogic\DependencyInjection.BusinessLogic.csproj", "{281DD6D9-2863-4B49-9399-781996E0D5BE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInjection.BusinessLogic.Tests", "DependencyInjection.BusinessLogic.Tests\DependencyInjection.BusinessLogic.Tests.csproj", "{ACED4A60-CA44-4731-AA40-6365D41A598E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{281DD6D9-2863-4B49-9399-781996E0D5BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{281DD6D9-2863-4B49-9399-781996E0D5BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{281DD6D9-2863-4B49-9399-781996E0D5BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACED4A60-CA44-4731-AA40-6365D41A598E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACED4A60-CA44-4731-AA40-6365D41A598E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACED4A60-CA44-4731-AA40-6365D41A598E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACED4A60-CA44-4731-AA40-6365D41A598E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

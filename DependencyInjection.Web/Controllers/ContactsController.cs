@@ -1,4 +1,5 @@
 ﻿using DependencyInjection.Web.Models;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
@@ -10,12 +11,17 @@ namespace DependencyInjection.Web.Controllers
     [RoutePrefix("api/contact")]
     public class ContactsController : ApiController
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
+        private readonly ApplicationDbContext db;
+
+        public ContactsController()
+        {
+            db = new ApplicationDbContext();
+        }
 
         // GET: api/contact
         [Route("")]
         [HttpGet]
-        public IQueryable<Contact> GetContacts()
+        public IEnumerable<Contact> GetContacts()
         {
             return db.Contacts;
         }
@@ -26,6 +32,7 @@ namespace DependencyInjection.Web.Controllers
         {
             var parsedId = int.Parse(id);
             Contact contact = db.Contacts.Find(parsedId);
+
             if (contact == null)
             {
                 return NotFound();
@@ -110,6 +117,7 @@ namespace DependencyInjection.Web.Controllers
         public IHttpActionResult DeleteContact(string id)
         {
             var parsedId = int.Parse(id);
+
             Contact contact = db.Contacts.Find(parsedId);
             if (contact == null)
             {

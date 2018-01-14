@@ -21,14 +21,12 @@ namespace DependencyInjection.Accessors
 
         public Contact Find(int id)
         {
-            //throw new NotImplementedException();
-            return Contacts.Find(id);
+            throw new NotImplementedException();
         }
 
         public Contact Insert(Contact contact)
         {
-            //throw new NotImplementedException();
-            return Contacts.Add(contact);
+            throw new NotImplementedException();
         }
 
         public void Update(Contact contact)
@@ -38,8 +36,7 @@ namespace DependencyInjection.Accessors
 
         public Contact Delete(Contact contact)
         {
-            //throw new NotImplementedException();
-            return Contacts.Remove(contact);
+            throw new NotImplementedException();
         }
 
         public bool Exists(int id)
@@ -47,9 +44,5 @@ namespace DependencyInjection.Accessors
             return Contacts.Any(c => c.Id == id);
         }
 
-        public override int SaveChanges()
-        {
-            return SaveChanges();
-        }
     }
 }

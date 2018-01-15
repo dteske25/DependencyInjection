@@ -44,5 +44,9 @@ namespace DependencyInjection.Accessors
             return Contacts.Any(c => c.Id == id);
         }
 
+        public override int SaveChanges()
+        {
+            return base.SaveChanges();
+        }
     }
 }

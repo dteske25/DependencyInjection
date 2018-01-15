@@ -34,10 +34,12 @@ There shouldn't be any errors at this point, so run the project and check that e
 
 ### Add an interface for ContactsAccessor in core project
 Look at the `ContactsAccessor` again, and create an interface for it in the core project. Make a new folder called `Accessors` and add the interface there, calling it `IContactsAccessor`.
+Copy all the method signatures (not the implementations, just the names, return types, and parameters, not the implementation or access modifier) from `ContactsAccessor` to `IContactsAccessor`.
 Go back to the `ContactsAccessor` and also extend this interface.
 
 ### Add interface for ContactsEngine in core project
 Look at the `ContactsEngine` again, and create an interface for it in the core project. Make a new folder called `Engines` and add the interface there, calling it `IContactsEngine`.
+Once again, copy all the method signatures from `ContactsEngine` to `IContactsEngine`.
 Go back to the `ContactsEngine` and extend this interface. 
 
 ### Register the interfaces with Unity

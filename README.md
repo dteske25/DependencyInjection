@@ -34,7 +34,7 @@ There shouldn't be any errors at this point, so run the project and check that e
 
 ### Add an interface for ContactsAccessor in core project
 Look at the `ContactsAccessor` again, and create an interface for it in the core project. Make a new folder called `Accessors` and add the interface there, calling it `IContactsAccessor`.
-Copy all the method signatures (not the implementations, just the names, return types, and parameters, not the implementation or access modifier) from `ContactsAccessor` to `IContactsAccessor`.
+Copy all the method signatures (just the names, return types, and parameters, not the implementation or access modifier) from `ContactsAccessor` to `IContactsAccessor`.
 Go back to the `ContactsAccessor` and also extend this interface.
 
 ### Add interface for ContactsEngine in core project
@@ -43,7 +43,7 @@ Once again, copy all the method signatures from `ContactsEngine` to `IContactsEn
 Go back to the `ContactsEngine` and extend this interface. 
 
 ### Register the interfaces with Unity
-Now that everything is defined, let's go ahead an actually do the dependency injection. Right click on `DependencyInjection.Web` and select `Manage Nuget Packages`. Search for "unity" and install the `Unity` and `Unity.AspNet.WebApi` package by `Microsoft.Practices.Unity`.
+Now that everything is defined, let's go ahead an actually do the dependency injection. Right click on `DependencyInjection.Web` and select `Manage Nuget Packages`. Search for "unity" and install the `Unity` and `Unity.AspNet.WebApi` packages by `Microsoft.Practices.Unity`.
 Notice that two files have been added to the `App_Start` folder in the web project. 
 
 Open the `UnityConfig.cs` file and find the TODO section of the `RegisterTypes` method. Following that format, register the two interfaces you just made with the implementations. Note that you will need to add the appropriate using statements.

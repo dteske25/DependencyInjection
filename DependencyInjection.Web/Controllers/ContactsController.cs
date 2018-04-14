@@ -106,7 +106,7 @@ namespace DependencyInjection.Web.Controllers
                 }
             }
 
-            return StatusCode(HttpStatusCode.NoContent);
+            return Ok();
         }
 
 

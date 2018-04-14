@@ -21,9 +21,9 @@ namespace DependencyInjection.Web.Controllers
         // GET: api/contact
         [Route("")]
         [HttpGet]
-        public IEnumerable<Contact> GetContacts()
+        public IHttpActionResult GetContacts()
         {
-            return db.Contacts;
+            return Ok(db.Contacts);
         }
 
         // GET: api/contact/5

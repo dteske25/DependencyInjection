@@ -28,6 +28,7 @@ namespace DependencyInjection.Web.Controllers
 
         // GET: api/contact/5
         [Route("{id}")]
+        [HttpGet]
         public IHttpActionResult GetContact(string id)
         {
             var parsedId = int.Parse(id);

@@ -4,6 +4,9 @@ We'll be starting off with a very simple project, migrating it to a project stru
 
 ## Getting it to work
 
+### Downloading the Project
+The project is located [here](https://github.com/dteske25/DependencyInjection). Run `git clone https://github.com/dteske25/DependencyInjection.git` to download the project.
+
 ### Run the project as is  
 Make sure there are no problems with running the project locally. Try adding a few contacts, editing and deleting.
 
